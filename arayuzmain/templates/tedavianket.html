@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Tedavi - Sorular{% endblock %}
+
+{% block content %}
+
+<h2> Teşhisiniz :  {{ tedavi }} </h2>
+
+<form method='post' action=''>
+
+    {% csrf_token %}
+
+    <h2>Hastanın bağışıklık sistemi durumunu seçiniz </h2>
+
+    <div class="soru_govde">
+    <input name="soru1" class="form-check-input" type="radio" id="1" value="0"/>İmmün yeterli</input><br>
+    <input name="soru1" class="form-check-input" type="radio" id="2" value="1"/>İmmün yetersiz</input>
+    </div>
+
+    <br>
+
+    <br>
+    <h2>Hastanın alerji durumunu seçiniz </h2>
+
+    <div class="soru_govde">
+    <input name="soru2" type="radio" id="3" value="0"/>Yok</input><br>
+    <input name="soru2" type="radio" id="4" value="1"/>Fluoroquinolone</input><br>
+    <input name="soru2" type="radio" id="5" value="2"/>Penisilin</input><br>
+    </div>
+
+
+    <br>
+    <h2>Hastanın enfeksiyon türünü seçiniz </h2>
+
+    <div class="soru_govde">
+    <input name="soru3" type="radio" id="6" value="0"/>Farklılaşmamış veya VAD cihazı enfeksiyonu</input><br>
+    <input name="soru3" type="radio" id="7" value="1"/>Akciğer iltihaplanması (Pneumonia)</input><br>
+    <input name="soru3" type="radio" id="8" value="2"/>İdrar yolu enfeksiyonu</input><br>
+    <input name="soru3" type="radio" id="9" value="3"/>Karın içi enfeksiyonu</input><br>    
+    <input name="soru3" type="radio" id="10" value="4"/>Cilt-Deri enfeksiyonu</input><br>
+    <input name="soru3" type="radio" id="11" value="5"/>Özel riskli deri enfeksiyonu (Kemoterapide malignite, nötropeni, şiddetli hücre aracılı immün yetmezlik, daldırma yaralanmaları, hayvan ısırıkları, diyabetik ayak ülseri)</input> <br>   
+    <input name="soru3" type="radio" id="12" value="6"/>Et yiyen hastalığı (Fournier kangren, gazlı kangren, clostridial gaz kangren dahil)</input><br>
+    <input name="soru3" type="radio" id="13" value="7"/>Spontan bakteriyel menenjit</input><br>
+    <input name="soru3" type="radio" id="14" value="8"/>Post bakteriyel menenjit, travma ya da neroşirürji</input><br>
+    </div>
+
+    <br>
+    <h2>Hastada bulunma riski olan enfeksiyon riskini seçiniz </h2>
+
+    <div class="soru_govde">
+    <input name="soru4" type="radio" id="15" value="0"/>Yok</input><br>
+    <input name="soru4" type="radio" id="16" value="1"/>ESBL</input><br>
+    <input name="soru4" type="radio" id="17" value="2"/>VRE</input><br>
+    <input name="soru4" type="radio" id="18" value="3"/>P. aeruginosa</input><br>
+    <input name="soru4" type="radio" id="19" value="4"/>Invasive candidiasis</input><br>
+    </div>
+
+    <br><br>
+    <h2>Hastanın yaş grubunu seçiniz</h2>
+
+    <div class="soru_govde">
+    <input name="soru5" type="radio" id="20" value="0"/>50 Yaş Altı</input>
+    <input name="soru5" type="radio" id="21" value="1"/>50 Yaş Üstü</input>
+    </div>
+
+    <br><br><br>
+    <button  type="submit" class="btn btn-outline-dark btn-lg center"> İlaçlarımı Görmek İstiyorum </button>
+    <br><br><br><br>
+    </form>
+
+{% endblock%}

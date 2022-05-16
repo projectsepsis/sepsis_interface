@@ -1,0 +1,79 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}Teşhis{% endblock %}
+
+<!-- https://coolors.co/e0f2e9-ceb5a7-a17c6b-5b7b7a-3c887e -->
+
+{% block content %}
+
+<div class="center"> 
+ 
+ <form method='post' action=''>
+
+    {% csrf_token %}
+
+    {% for i in item_id %}
+
+        <div class="input-group input-group-lg">
+         <div class="input-group-prepend">
+
+            {% if i == 1 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.1}}</span>
+           {% endif %}
+
+
+            {% if i == 2 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.2}}</span>
+           {% endif %}
+
+           {% if i == 3 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.3}}</span>
+           {% endif %}
+
+           {% if i == 4 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.4}}</span>
+           {% endif %}
+
+           {% if i == 5 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.5}}</span>
+           {% endif %}
+
+           {% if i == 6 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.6}}</span>
+           {% endif %}
+
+            {% if i == 7 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.7}}</span>
+           {% endif %}
+
+           {% if i == 8 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.8}}</span>
+           {% endif %}
+
+           {% if i == 9 %}
+           <span class="input-group-text" id="inputGroup-sizing-lg">{{dict_item.9}}</span>
+           {% endif %}
+
+         </div>
+         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="{{i}}" type="text">
+       </div>
+       <br>
+
+    {% endfor %}
+<!--
+   
+    <p> Soru : Ateşiniz yüksek mi? </p>
+    <input name="etkisiz" type="radio" value="evet"/>Evet</input>
+    <input name="etkisiz" type="radio" value="hayır"/>Hayır</input>
+ 
+  -->
+ 
+  <div class="center"> 
+    <button  type="submit" class="btn btn-outline-dark btn-lg center"> Teşhis Et! </button> 
+</div>
+ </form>
+ <br> <br> <br>
+</div>
+ {% endblock %}
